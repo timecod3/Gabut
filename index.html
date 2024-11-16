@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cek Khodam</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        font-family: "Poppins", sans-serif;
+      }
+
+      .container {
+        margin-top: 50px;
+      }
+
+      .jumbotron {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 60px;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .card {
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      .card:hover {
+        transform: rotateY(10deg) scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .form-container {
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn-custom {
+        background-color: #6a11cb;
+        color: white;
+        padding: 12px 30px;
+        font-size: 18px;
+        border-radius: 10px;
+        border: none;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .btn-custom:hover {
+        background-color: #2575fc;
+        transform: scale(1.1);
+      }
+
+      .hasil {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #e0f7fa;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn-custom:active {
+        transform: scale(0.95);
+      }
+
+      /* Cool 3D effect for table */
+      /* Update untuk header tabel */
+      #khodamTable th {
+        background: linear-gradient(
+          135deg,
+          #ff7e5f,
+          #feb47b
+        ); /* Gradien merah-ke-emas */
+        color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      /* Update untuk warna latar belakang dan hover pada sel tabel */
+      #khodamTable td {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        background: #333; /* Warna latar belakang gelap */
+        color: #fff;
+        transition: all 0.3s ease;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- <div class="jumbotron">
+        <h1 class="display-4">Cek Khodam</h1>
+        <p class="lead">Apa kaitan nama kamu dengan Khodam?</p>
+        <hr class="my-4" />
+        <p>Masukkan nama kamu untuk mengetahui Khodam dan penjelasannya!</p>
+      </div> -->
+
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="form-container">
+              <form id="khodamForm">
+                <div class="mb-4">
+                  <input
+                    type="text"
+                    class="form-control form-control-lg"
+                    id="nameInput"
+                  />
+                </div>
+                <button type="submit" class="btn-custom btn-lg w-100">
+                  Cek Khodam
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <table id="khodamTable" class="table table-striped table-hover mt-4">
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Khodam</th>
+            <th>Nama Khodam</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Rows will be added here by JavaScript -->
+        </tbody>
+      </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
